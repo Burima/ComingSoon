@@ -57,6 +57,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#subscribe">Subscribe</a></li>
                 <li><a href="#contact">Contact</a></li>
+				<li class="li-blog"><a href="@System.Configuration.ConfigurationManager.AppSettings.Get("Blog_URL")" target="_blank">Blog</a></li>
             </ul> <!-- /.nav .navbar-nav -->
         </nav> <!-- /.navbar-collapse  -->
     </div><!-- /#main-menu -->
@@ -301,15 +302,18 @@
     <script type="text/javascript">
         var SendContactUsMailUrl = '@Url.Action("SendContactUsMail","Home")';
         var SendSubscriptionMailUrl = '@Url.Action("SendSubscriptionMail", "Home")';
-
+        
         $(document).ready(function () {
-            $('#clock').countdown('2015/6/15 12:00:00', function (event) {
+            $('#clock').countdown('2015/6/28 12:00:00', function (event) {
                 $('span.days').html(event.strftime('%D'));
                 $('span.hours').html(event.strftime('%H'));
                 $('span.minutes').html(event.strftime('%M'));
                 $('span.seconds').html(event.strftime('%S'));
             });
-
+            $('.li-blog').click(function () {
+                //this will redirect us in new tab
+                window.open("http://lockyourstay.com/blog", '_blank');
+            });
            
         });
     </script>

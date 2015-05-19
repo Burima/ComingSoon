@@ -94,6 +94,7 @@
     <Content Include="Content\js\jquery.countdown.min.js" />
     <Content Include="Content\js\modernizr-2.8.0.min.js" />
     <Content Include="Content\js\plugins.js" />
+    <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="images\background\about-us.jpg" />
     <Content Include="images\background\contact.jpg" />
